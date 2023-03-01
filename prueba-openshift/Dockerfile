@@ -26,6 +26,6 @@ RUN chmod +x /app/run.sh
 #USER infra
 
 # Iniciamos la aplicacion
-#ENTRYPOINT ["run.sh"]
+ENTRYPOINT ["/app/run.sh"]
 #CMD ["echo", "Hello from CMD"]
-ENTRYPOINT ["/bin/sh"]
+#ENTRYPOINT ["/bin/sh"]
