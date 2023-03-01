@@ -17,8 +17,8 @@ ENV VARIABLE1 1
 # Fijamos directorio de trabajo y añadimos software necesario a la imagen
 WORKDIR /app
 #ADD . /app
-COPY run.sh .
-COPY target/*.jar app.jar
+COPY run.sh /app
+COPY target/*.jar /app/app.jar
 
 # Cambiamos a un usuario que no sea root, creandolo previamente
 #RUN useradd infra && chown -R infra /app
