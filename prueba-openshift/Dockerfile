@@ -1,5 +1,5 @@
 # Imagen de dockerhub con Alpine y JRE 11
-FROM docker.io/eclipse-temurin:11-jre-alpine
+FROM eclipse-temurin:11-jre-alpine
 
 # Informamos puerto usado
 EXPOSE 8080
@@ -21,8 +21,8 @@ COPY run.sh .
 COPY target/*.jar app.jar
 
 # Cambiamos a un usuario que no sea root, creandolo previamente
-RUN useradd infra && chown -R infra /app
-USER infra
+#RUN useradd infra && chown -R infra /app
+#USER infra
 
 # Iniciamos la aplicacion
 ENTRYPOINT ["run.sh"]
