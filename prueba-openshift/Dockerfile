@@ -19,7 +19,7 @@ WORKDIR /app
 #ADD . /app
 COPY run.sh /app
 COPY target/*.jar /app/app.jar
-RUN chmod +x run.sh
+RUN chmod +x /app/run.sh
 
 # Cambiamos a un usuario que no sea root, creandolo previamente
 #RUN useradd infra && chown -R infra /app
