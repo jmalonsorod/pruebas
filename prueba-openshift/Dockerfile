@@ -1,5 +1,5 @@
 # Imagen de dockerhub con Alpine y JRE 11
-FROM eclipse-temurin:11-jre-alpine
+FROM docker.io/eclipse-temurin:11-jre-alpine
 
 # Informamos puerto usado
 EXPOSE 8080
